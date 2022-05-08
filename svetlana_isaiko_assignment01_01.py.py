@@ -6,21 +6,25 @@ import os
 #
 # Assign actual data to the variables below
 # and run the script to print the output.
-def start_inp(d):
-    name = input("name: ")
-    profession = input("profession: ")
-    facility = input("facility: ")
-    city = input("city: ")
-    country = input("country: ")
-    goal = input("goal: ")
-    d = {'name': name,
-         'profession': profession,
-         'facility': facility,
-         'city': city,
-         'country': country,
-         'goal': goal,
-         }
-    return d
+def start(d):
+    choose = int(input("print data - 1, change - 0"))
+    if choose == 1:
+        start_prnt(d)
+    if choose == 0:
+        name = input("name: ")
+        profession = input("profession: ")
+        facility = input("facility: ")
+        city = input("city: ")
+        country = input("country: ")
+        goal = input("goal: ")
+        d = {'name': name,
+             'profession': profession,
+             'facility': facility,
+             'city': city,
+             'country': country,
+             'goal': goal,
+             }
+        start_prnt(d)
 
 
 def start_prnt(d):
@@ -36,8 +40,4 @@ if __name__ == '__main__':
          'country': 'Ukraine',
          'goal': 'Python developer',
          }
-    choose = int(input("print data - 1, change - 0"))
-    if choose == 1:
-        start_prnt(d)
-    if choose == 0:
-        start_prnt(start_inp(d))
+    start(d)
