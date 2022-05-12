@@ -17,9 +17,9 @@ def input_data():
 
 if __name__ == '__main__':
     while True:
-        choose = int(input("1 - yes, 0 - no"))
+        choose = int(input("We continue? 1 - yes, 0 - no"))
         if choose == 1:
             volume = volume_calculation()
-            print(volume)
+            print("cylinder volume = " + str(volume))
         if choose == 0:
             break
