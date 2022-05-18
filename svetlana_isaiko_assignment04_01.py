@@ -20,21 +20,21 @@ def input_data():
 
 
 def calculation():
+    number = input_data()
+    factorial = 1
+    if number >= 0:
+        for i in range(2, number + 1):
+            factorial *= i
+        print(f"{number}! == {factorial}")
+    else:
+        print("Введите позитивное число")
+
+
+if __name__ == '__main__':
     while True:
-        number = input_data()
-        factorial = 1
-        if number >= 0:
-            for i in range(2, number + 1):
-                factorial *= i
-            print(f"{number}! == {factorial}")
-        else:
-            print("Введите позитивное число")
+        calculation()
         choose = int(input("хотите узнать факториал числа? 1 - да: "))
         if choose == 1:
             continue
         else:
             break
-
-
-if __name__ == '__main__':
-    calculation()
