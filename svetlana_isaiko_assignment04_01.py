@@ -15,26 +15,34 @@
 # Невірний ввод
 
 def input_data():
+    """Функція для вводу даних"""
     number = int(input("Введите число: "))
     return number
 
 
-def calculation():
-    number = input_data()
+def calculation(number):
+    """Функція яка обчислює факторіал числа"""
     factorial = 1
-    if number >= 0:
-        for i in range(2, number + 1):
-            factorial *= i
-        print(f"{number}! == {factorial}")
-    else:
-        print("Введите позитивное число")
+    for i in range(2, number + 1):
+        factorial *= i
+    print(f"{number}! == {factorial}")
 
 
-if __name__ == '__main__':
+def main():
+    """Функція зв'язує функцію ввода даних та обчислення факторіала, додається цикл та умови
+    виходу з нього."""
     while True:
-        calculation()
-        choose = int(input("хотите узнать факториал числа? 1 - да: "))
+        number = input_data()
+        if number >= 0:
+            calculation(number)
+        else:
+            print("Невірний ввод")
+        choose = int(input("Хочете дізнатися факторіал числа? 1 - да: "))
         if choose == 1:
             continue
         else:
             break
+
+
+if __name__ == '__main__':
+    main()
