@@ -12,46 +12,31 @@
 #    * list(sequence), а також tuple/set конструктори
 #    * reverse=True
 
-# text = input("Введіть строку: ")
-# a = text.split()
-# i = 0
-# while i < len(a):
-#
-#     i += 1
-# text = "band aca bdf"
-# a = text.split()
-# i = 0
-# l = []
-# while i < len(a):
-#     mas = a[i]
-#     n = list(mas)
-#     n.sort()
-#     l.append("".join(map(str, n)))
-#     i += 1
-# l.sort()
-# print(" ".join(l))
-
-
 def input_data():
+    """Функція для зчитування даних"""
     text = input("Введіть речення: ")
     return text
 
 
-def sor_data(text):
-    a = text.split()
+def letter_sorting(text, sor_letter):
+    """Функція виконує сортування літер в кожному слові у спадаючому/зростаючому порядку"""
+    new_text = text.split()
     i = 0
     l = []
-    while i < len(a):
-        n = tuple(a[i])
-        sorted(n)
+    while i < len(new_text):
+        n = list(new_text[i])
+        if sor_letter == 1:
+            n.sort()
+        elif sor_letter == 2:
+            n.sort(reverse=True)
         l.append("".join(map(str, n)))
         i += 1
-    print(l)
     return l
 
 
-def vid_sort(choose, text):
-    l = sor_data(text)
+def word_sorting(choose, text, sor_letter):
+    """Функція виконує сортування слів в реченні у спадаючому/зростаючому порядку"""
+    l = letter_sorting(text, sor_letter)
     if choose == 1:
         l.sort(key=lambda x: x.lower())
     elif choose == 2:
@@ -59,12 +44,22 @@ def vid_sort(choose, text):
     return l
 
 
+def sort_selection():
+    sor_letter = int(input("Оберіть тип сортування літер у словах 1 - по зростанню 2 - навпаки: "))
+    choose = int(input("Оберіть тип сортування слів у реченні 1 - по зростанню 2 - навпаки: "))
+    return sor_letter, choose
+
+
 def main():
+    """Головна функція програми, яка з'єднує всі попередні, дадаючи  можливість декілька разів користувачу
+    вводити данні, відбується спочатку сортування літер, а потім слів"""
     i = 0
     while i < 5:
         text = input_data()
-        choose = int(input("Виберіть сортування  1 - по зростанню 2 - навпаки: "))
-        l = vid_sort(choose, text)
+        if not len(text):
+            continue
+        sor_letter, choose = sort_selection()
+        l = word_sorting(choose, text, sor_letter)
         print(" ".join(l))
         i += 1
 
