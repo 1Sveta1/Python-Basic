@@ -45,6 +45,7 @@ def word_sorting(choose, text, sor_letter):
 
 
 def sort_selection():
+    """Функція яка повертає обраний користувачем тип сортування"""
     sor_letter = int(input("Оберіть тип сортування літер у словах 1 - по зростанню 2 - навпаки: "))
     choose = int(input("Оберіть тип сортування слів у реченні 1 - по зростанню 2 - навпаки: "))
     return sor_letter, choose
