@@ -34,7 +34,7 @@ def input_data():
 
 def fib(n):
     """Функція яка повертає число Фінабоччі"""
-    if n < 2:
+    if n < 3:
         return 1
     return fib(n - 2) + fib(n - 1)
 
