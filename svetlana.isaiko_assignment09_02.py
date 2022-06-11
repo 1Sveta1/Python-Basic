@@ -42,7 +42,7 @@ def fib(n):
 def main():
     """Головна функція для з'єднує ввод даних та обчислення числа Фінабоччі"""
     n = input_data()
-    n_fib = fib(n-2)
+    n_fib = fib(n-1)
     print(n_fib)
 
 
