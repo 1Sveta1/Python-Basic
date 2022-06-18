@@ -4,3 +4,7 @@ def fizzbuzz(n):
            i in range(1, n + 1)]
     return lst
 
+
+if __name__ == '__main__':
+    lst = fizzbuzz(20)
+    print(lst)
