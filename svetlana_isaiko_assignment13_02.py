@@ -27,7 +27,6 @@ def load_matrix(filename):
         # matrix.append()  # list-comprehension, по-елментно додаємо числа з вичитаного рядка у matrix
         for line in inp:
             matrix.append([i for i in list(map(int, line.split()))])
-    inp.close()
     return n, m, matrix
 
 
