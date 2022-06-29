@@ -20,7 +20,7 @@
 
 class Student:
 
-    def __int__(self, name, record_book_number, number_of_debts):
+    def __init__(self, name, record_book_number, number_of_debts):
         self.name = name
         self.record_book_number = record_book_number
         self.number_of_debts = number_of_debts
@@ -31,10 +31,10 @@ class Student:
 
 
 def main():
-    st1 = Student()
-    st1.name = input("Имя студента: ")
-    st1.record_book_number = input("Номер зачетной книги: ")
-    st1.number_of_debts = int(input("Количество задолжностей: "))
+    name = input("Имя студента: ")
+    record_book_number = input("Номер зачетной книги: ")
+    number_of_debts = int(input("Количество задолжностей: "))
+    st1 = Student(name, record_book_number, number_of_debts)
     while True:
         print(f"1 - Вся информаци о студенте {st1.name}, 2 - cдача задолжностей")
         choose = input("Выбор: ")
