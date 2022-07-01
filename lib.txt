@@ -1,8 +1,0 @@
-f0fcbd20-d957-4d13-bf2c-28f1cee4e34e,  A Tale of Two Cities,  Charles Dickens,  1859 
-6be88c5b-35ab-4192-b4b2-1d29dc093dcb,  The Little Prince,  Antoine de Saint-Exupéry,  1943 
-ff09a724-94f1-4e2f-af8d-51281b79d9ab,  Harry Potter and the Philosopher's Stone,  J. K. Rowling,  1997 
-54790eac-1220-444a-aa88-21db098fea90,  And Then There Were None,  Agatha Christie,  1939 
-eca88115-ef8a-44ad-a4d8-bd6a8f4da3c7,  Dream of the Red Chamber,  Cao Xueqin,  1791 
-5c4b21b8-8c83-4bad-a3d8-a9a1be870184,  The Hobbit,  J. R. R. Tolkien,  1937 
-141c7883-6542-4acf-afb1-e757a94d0f29,  Capital,  Karl Marx,  1867 
-1af2bc73-15eb-4016-96f1-40e65d05c98a, Last wish, Andrzej Sapkowski, 1993 
